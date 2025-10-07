@@ -1,0 +1,204 @@
+{
+  "navigation": {
+    "home": "Home",
+    "features": "Features",
+    "solutions": "Solutions",
+    "about": "About",
+    "contact": "Contact",
+    "getStarted": "Get Started",
+    "testimonials": "Reviews",
+    "github": "GitHub",
+    "dropdown": {
+      "solutionsTitle": "Solutions",
+      "solutionsDescription": "Complete tools for school associations",
+      "studentManagement": "Student Management",
+      "studentDescription": "Comprehensive student registration and profile management system.",
+      "eventOrganization": "Event Organization",
+      "eventDescription": "Plan, organize and manage association events with ease.",
+      "financialManagement": "Financial Management",
+      "financialDescription": "QR code payments and financial tracking for your association.",
+      "communicationHub": "Communication Hub",
+      "communicationDescription": "Centralized communication platform for members and staff.",
+      "viewAllSolutions": "View all solutions →"
+    }
+  },
+  "hero": {
+    "badge": "Open Source School Platform",
+    "title": "Revolutionize Your School Management with ProximApp",
+    "subtitle": "An open-source Flutter application with Python FastAPI backend, featuring SSO integration, QR payment systems, and comprehensive school administration tools.",
+    "primaryCta": "Get Started",
+    "secondaryCta": "View Demo"
+  },
+  "features": {
+    "title": "Core Features",
+    "subtitle": "Everything you need to manage your school efficiently",
+    "sso": {
+      "title": "Single Sign-On (SSO)",
+      "description": "Seamless authentication across all school platforms"
+    },
+    "qr": {
+      "title": "QR Payment System",
+      "description": "Quick and secure payment processing for school services"
+    },
+    "management": {
+      "title": "Student Management",
+      "description": "Comprehensive student information and academic tracking"
+    },
+    "analytics": {
+      "title": "Analytics Dashboard",
+      "description": "Real-time insights into school performance and metrics"
+    },
+    "communication": {
+      "title": "Communication Hub",
+      "description": "Streamlined communication between staff, students, and parents"
+    },
+    "mobile": {
+      "title": "Mobile-First Design",
+      "description": "Native Flutter apps for iOS and Android platforms"
+    }
+  },
+  "stats": {
+    "schools": "Active Schools",
+    "students": "Students Served",
+    "uptime": "System Uptime",
+    "satisfaction": "User Satisfaction"
+  },
+  "testimonials": {
+    "title": "What Our Users Say",
+    "subtitle": "Trusted by thousands of students, faculty, and administrators across leading educational institutions.",
+    "categories": {
+      "all": "All Reviews",
+      "student": "Students",
+      "teacher": "Faculty",
+      "admin": "Administrators"
+    },
+    "stats": {
+      "institutions": "Institutions",
+      "users": "Active Users",
+      "rating": "Average Rating"
+    }
+  },
+  "cta": {
+    "title": "Ready to Transform Your School?",
+    "subtitle": "Join thousands of educational institutions already using ProximApp to streamline their operations.",
+    "button": "Start Your Journey",
+    "secondaryButton": "Explore GitHub"
+  },
+  "footer": {
+    "description": "Open-source school management platform built with modern technologies.",
+    "product": "Product",
+    "support": "Support",
+    "company": "Company",
+    "legal": "Legal",
+    "rights": "All rights reserved."
+  },
+  "pages": {
+    "features": {
+      "title": "Features",
+      "subtitle": "Discover the powerful features that make ProximApp the perfect choice for your school",
+      "student": {
+        "title": "Student Information System",
+        "description": "Comprehensive student data management with academic tracking, attendance monitoring, and performance analytics."
+      },
+      "payment": {
+        "title": "QR Payment Integration",
+        "description": "Secure and fast payment processing for school fees, cafeteria, and other services using QR codes."
+      },
+      "authentication": {
+        "title": "Single Sign-On (SSO)",
+        "description": "Unified authentication system that works across all school platforms and applications."
+      },
+      "analytics": {
+        "title": "Advanced Analytics",
+        "description": "Real-time dashboards and reports to track school performance, student progress, and operational efficiency."
+      },
+      "communication": {
+        "title": "Communication Platform",
+        "description": "Integrated messaging system for seamless communication between teachers, students, and parents."
+      },
+      "mobile": {
+        "title": "Cross-Platform Mobile Apps",
+        "description": "Native Flutter applications providing full functionality on both iOS and Android devices."
+      }
+    },
+    "solutions": {
+      "title": "Solutions",
+      "subtitle": "Tailored solutions for different educational needs",
+      "elementary": {
+        "title": "Elementary Schools",
+        "description": "Child-friendly interface with parent communication tools and basic academic tracking.",
+        "features": [
+          "Parent Portal",
+          "Basic Gradebook",
+          "Attendance Tracking",
+          "Event Calendar"
+        ]
+      },
+      "secondary": {
+        "title": "Secondary Schools",
+        "description": "Advanced academic management with course scheduling and performance analytics.",
+        "features": [
+          "Course Management",
+          "Grade Analytics",
+          "Timetable System",
+          "Exam Management"
+        ]
+      },
+      "university": {
+        "title": "Universities",
+        "description": "Comprehensive platform for higher education with research and department management.",
+        "features": [
+          "Department Management",
+          "Research Tracking",
+          "Alumni Network",
+          "Advanced Analytics"
+        ]
+      }
+    },
+    "about": {
+      "title": "About ProximApp",
+      "subtitle": "Building the future of educational technology",
+      "mission": {
+        "title": "Our Mission",
+        "description": "To democratize access to high-quality school management software by providing an open-source platform that schools can customize and deploy according to their specific needs."
+      },
+      "technology": {
+        "title": "Technology Stack",
+        "description": "Built with modern, scalable technologies to ensure reliability and performance.",
+        "items": [
+          "Flutter for cross-platform mobile apps",
+          "Python FastAPI for robust backend",
+          "PostgreSQL for reliable data storage",
+          "Docker for easy deployment"
+        ]
+      },
+      "community": {
+        "title": "Open Source Community",
+        "description": "ProximApp is built by educators, for educators. Join our growing community of contributors and help shape the future of school management software."
+      }
+    },
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "Get in touch with our team",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "send": "Send Message",
+        "description": "Get in touch with our team for any questions or support.",
+        "namePlaceholder": "Your full name",
+        "emailPlaceholder": "your.email@company.com",
+        "subjectPlaceholder": "Brief description of your inquiry",
+        "messagePlaceholder": "Tell us more about your project or inquiry. Include any specific requirements or questions you have.",
+        "responseTime": "We'll get back to you within 24 hours",
+        "supportNote": "General inquiries and support - We'll get back to you within 24 hours"
+      },
+      "info": {
+        "email": "Email",
+        "phone": "Phone",
+        "address": "Address"
+      }
+    }
+  }
+}

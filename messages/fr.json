@@ -1,0 +1,204 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "features": "Fonctionnalités",
+    "solutions": "Solutions",
+    "about": "À propos",
+    "contact": "Contact",
+    "getStarted": "Commencer",
+    "testimonials": "Avis",
+    "github": "GitHub",
+    "dropdown": {
+      "solutionsTitle": "Solutions",
+      "solutionsDescription": "Outils complets pour les associations scolaires",
+      "studentManagement": "Gestion des Étudiants",
+      "studentDescription": "Système complet d'inscription et de gestion des profils étudiants.",
+      "eventOrganization": "Organisation d'Événements",
+      "eventDescription": "Planifiez, organisez et gérez les événements associatifs en toute simplicité.",
+      "financialManagement": "Gestion Financière",
+      "financialDescription": "Paiements par QR code et suivi financier pour votre association.",
+      "communicationHub": "Hub de Communication",
+      "communicationDescription": "Plateforme de communication centralisée pour les membres et le personnel.",
+      "viewAllSolutions": "Voir toutes les solutions →"
+    }
+  },
+  "hero": {
+    "badge": "Plateforme Scolaire Open Source",
+    "title": "Révolutionnez la Gestion de Votre École avec ProximApp",
+    "subtitle": "Une application Flutter open-source avec backend Python FastAPI, intégrant SSO, systèmes de paiement QR, et outils complets d'administration scolaire.",
+    "primaryCta": "Commencer",
+    "secondaryCta": "Voir la Démo"
+  },
+  "features": {
+    "title": "Fonctionnalités Principales",
+    "subtitle": "Tout ce dont vous avez besoin pour gérer votre école efficacement",
+    "sso": {
+      "title": "Authentification Unique (SSO)",
+      "description": "Authentification transparente sur toutes les plateformes scolaires"
+    },
+    "qr": {
+      "title": "Système de Paiement QR",
+      "description": "Traitement de paiement rapide et sécurisé pour les services scolaires"
+    },
+    "management": {
+      "title": "Gestion des Étudiants",
+      "description": "Suivi complet des informations et du parcours académique des étudiants"
+    },
+    "analytics": {
+      "title": "Tableau de Bord Analytique",
+      "description": "Aperçus en temps réel des performances et métriques de l'école"
+    },
+    "communication": {
+      "title": "Hub de Communication",
+      "description": "Communication rationalisée entre le personnel, les étudiants et les parents"
+    },
+    "mobile": {
+      "title": "Design Mobile-First",
+      "description": "Applications Flutter natives pour plateformes iOS et Android"
+    }
+  },
+  "stats": {
+    "schools": "Écoles Actives",
+    "students": "Étudiants Servis",
+    "uptime": "Disponibilité Système",
+    "satisfaction": "Satisfaction Utilisateur"
+  },
+  "testimonials": {
+    "title": "Ce Que Disent Nos Utilisateurs",
+    "subtitle": "Approuvé par des milliers d'étudiants, professeurs et administrateurs dans les principales institutions éducatives.",
+    "categories": {
+      "all": "Tous les Avis",
+      "student": "Étudiants",
+      "teacher": "Professeurs",
+      "admin": "Administrateurs"
+    },
+    "stats": {
+      "institutions": "Institutions",
+      "users": "Utilisateurs Actifs",
+      "rating": "Note Moyenne"
+    }
+  },
+  "cta": {
+    "title": "Prêt à Transformer Votre École ?",
+    "subtitle": "Rejoignez des milliers d'institutions éducatives utilisant déjà ProximApp pour rationaliser leurs opérations.",
+    "button": "Commencez Votre Voyage",
+    "secondaryButton": "Explorer GitHub"
+  },
+  "footer": {
+    "description": "Plateforme de gestion scolaire open-source construite avec des technologies modernes.",
+    "product": "Produit",
+    "support": "Support",
+    "company": "Entreprise",
+    "legal": "Légal",
+    "rights": "Tous droits réservés."
+  },
+  "pages": {
+    "features": {
+      "title": "Fonctionnalités",
+      "subtitle": "Découvrez les fonctionnalités puissantes qui font de ProximApp le choix parfait pour votre école",
+      "student": {
+        "title": "Système d'Information Étudiant",
+        "description": "Gestion complète des données étudiantes avec suivi académique, surveillance de l'assiduité et analyses de performance."
+      },
+      "payment": {
+        "title": "Intégration Paiement QR",
+        "description": "Traitement de paiement sécurisé et rapide pour les frais scolaires, la cafétéria et autres services utilisant des codes QR."
+      },
+      "authentication": {
+        "title": "Authentification Unique (SSO)",
+        "description": "Système d'authentification unifié qui fonctionne sur toutes les plateformes et applications scolaires."
+      },
+      "analytics": {
+        "title": "Analyses Avancées",
+        "description": "Tableaux de bord et rapports en temps réel pour suivre les performances de l'école, les progrès des étudiants et l'efficacité opérationnelle."
+      },
+      "communication": {
+        "title": "Plateforme de Communication",
+        "description": "Système de messagerie intégré pour une communication transparente entre enseignants, étudiants et parents."
+      },
+      "mobile": {
+        "title": "Applications Mobile Multi-Plateformes",
+        "description": "Applications Flutter natives offrant toutes les fonctionnalités sur appareils iOS et Android."
+      }
+    },
+    "solutions": {
+      "title": "Solutions",
+      "subtitle": "Solutions adaptées aux différents besoins éducatifs",
+      "elementary": {
+        "title": "Écoles Primaires",
+        "description": "Interface adaptée aux enfants avec outils de communication parentale et suivi académique de base.",
+        "features": [
+          "Portail Parents",
+          "Carnet de Notes Basique",
+          "Suivi d'Assiduité",
+          "Calendrier d'Événements"
+        ]
+      },
+      "secondary": {
+        "title": "Écoles Secondaires",
+        "description": "Gestion académique avancée avec planification de cours et analyses de performance.",
+        "features": [
+          "Gestion de Cours",
+          "Analyses de Notes",
+          "Système d'Horaires",
+          "Gestion d'Examens"
+        ]
+      },
+      "university": {
+        "title": "Universités",
+        "description": "Plateforme complète pour l'enseignement supérieur avec gestion de recherche et de départements.",
+        "features": [
+          "Gestion de Départements",
+          "Suivi de Recherche",
+          "Réseau d'Anciens",
+          "Analyses Avancées"
+        ]
+      }
+    },
+    "about": {
+      "title": "À Propos de ProximApp",
+      "subtitle": "Construire l'avenir de la technologie éducative",
+      "mission": {
+        "title": "Notre Mission",
+        "description": "Démocratiser l'accès aux logiciels de gestion scolaire de haute qualité en fournissant une plateforme open-source que les écoles peuvent personnaliser et déployer selon leurs besoins spécifiques."
+      },
+      "technology": {
+        "title": "Stack Technologique",
+        "description": "Construit avec des technologies modernes et évolutives pour assurer fiabilité et performance.",
+        "items": [
+          "Flutter pour applications mobiles multi-plateformes",
+          "Python FastAPI pour backend robuste",
+          "PostgreSQL pour stockage de données fiable",
+          "Docker pour déploiement facile"
+        ]
+      },
+      "community": {
+        "title": "Communauté Open Source",
+        "description": "ProximApp est construit par des éducateurs, pour des éducateurs. Rejoignez notre communauté croissante de contributeurs et aidez à façonner l'avenir des logiciels de gestion scolaire."
+      }
+    },
+    "contact": {
+      "title": "Nous Contacter",
+      "subtitle": "Entrez en contact avec notre équipe",
+      "form": {
+        "name": "Nom",
+        "email": "Email",
+        "subject": "Sujet",
+        "message": "Message",
+        "send": "Envoyer le Message",
+        "description": "Contactez notre équipe pour toute question ou assistance.",
+        "namePlaceholder": "Votre nom complet",
+        "emailPlaceholder": "votre.email@entreprise.com",
+        "subjectPlaceholder": "Brève description de votre demande",
+        "messagePlaceholder": "Parlez-nous davantage de votre projet ou demande. Incluez les exigences spécifiques ou questions que vous avez.",
+        "responseTime": "Nous vous répondrons dans les 24 heures",
+        "supportNote": "Demandes générales et support - Nous vous répondrons dans les 24 heures"
+      },
+      "info": {
+        "email": "Email",
+        "phone": "Téléphone",
+        "address": "Adresse"
+      }
+    }
+  }
+}
