@@ -1,204 +1,108 @@
 {
-  "navigation": {
-    "home": "Accueil",
-    "features": "Fonctionnalités",
-    "solutions": "Solutions",
-    "about": "À propos",
-    "contact": "Contact",
-    "getStarted": "Commencer",
-    "testimonials": "Avis",
-    "github": "GitHub",
-    "dropdown": {
-      "solutionsTitle": "Solutions",
-      "solutionsDescription": "Outils complets pour les associations scolaires",
-      "studentManagement": "Gestion des Étudiants",
-      "studentDescription": "Système complet d'inscription et de gestion des profils étudiants.",
-      "eventOrganization": "Organisation d'Événements",
-      "eventDescription": "Planifiez, organisez et gérez les événements associatifs en toute simplicité.",
-      "financialManagement": "Gestion Financière",
-      "financialDescription": "Paiements par QR code et suivi financier pour votre association.",
-      "communicationHub": "Hub de Communication",
-      "communicationDescription": "Plateforme de communication centralisée pour les membres et le personnel.",
-      "viewAllSolutions": "Voir toutes les solutions →"
-    }
-  },
-  "hero": {
-    "badge": "Plateforme Scolaire Open Source",
-    "title": "Révolutionnez la Gestion de Votre École avec ProximApp",
-    "subtitle": "Une application Flutter open-source avec backend Python FastAPI, intégrant SSO, systèmes de paiement QR, et outils complets d'administration scolaire.",
-    "primaryCta": "Commencer",
-    "secondaryCta": "Voir la Démo"
-  },
-  "features": {
-    "title": "Fonctionnalités Principales",
-    "subtitle": "Tout ce dont vous avez besoin pour gérer votre école efficacement",
-    "sso": {
-      "title": "Authentification Unique (SSO)",
-      "description": "Authentification transparente sur toutes les plateformes scolaires"
+  "showcase": {
+    "nav": {
+      "features": "Fonctions",
+      "custom": "Sur-mesure",
+      "personalization": "Personnalisation",
+      "demo": "Démo",
+      "cta": "Démo →"
     },
-    "qr": {
-      "title": "Système de Paiement QR",
-      "description": "Traitement de paiement rapide et sécurisé pour les services scolaires"
+    "hero": {
+      "badge": "Construit par des étudiants · Open source",
+      "titleLead": "L'app qui fait vivre votre",
+      "titleHighlight": "campus.",
+      "subtitle": "Une application à l'image de votre association — paiements, événements, actus et les modules que vous imaginez. On la construit, on la déploie, on l'accompagne.",
+      "ctaPrimary": "Demander une démo",
+      "ctaSecondary": "Parler de notre besoin",
+      "usersLabel": "Ils l'utilisent",
+      "mockupAlt": "Aperçu de l'application ProximApp sur mobile"
     },
-    "management": {
-      "title": "Gestion des Étudiants",
-      "description": "Suivi complet des informations et du parcours académique des étudiants"
+    "trust": {
+      "items": [
+        "Construit par des étudiants",
+        "Flutter + FastAPI",
+        "Auto-hébergeable",
+        "100% open source"
+      ]
     },
-    "analytics": {
-      "title": "Tableau de Bord Analytique",
-      "description": "Aperçus en temps réel des performances et métriques de l'école"
+    "sectionFeatures": {
+      "eyebrow": "Fonctionnalités",
+      "title": "Tout ce qu'il faut pour la vie associative",
+      "intro": "Des paiements aux événements, en passant par les actus et les votes — et les modules sur-mesure que vous imaginez."
     },
-    "communication": {
-      "title": "Hub de Communication",
-      "description": "Communication rationalisée entre le personnel, les étudiants et les parents"
+    "payment": {
+      "eyebrow": "Paiement par QR code",
+      "title": "Encaissez d'un scan sans frais",
+      "desc": "Cotisations, events et boutique : vos membres scannent, c'est payé.",
+      "toastMeta": "PROXIMAPP · maintenant",
+      "toastMsg": "Paiement reçu — <b>12,00 €</b> · Cotisation BDE"
     },
-    "mobile": {
-      "title": "Design Mobile-First",
-      "description": "Applications Flutter natives pour plateformes iOS et Android"
-    }
-  },
-  "stats": {
-    "schools": "Écoles Actives",
-    "students": "Étudiants Servis",
-    "uptime": "Disponibilité Système",
-    "satisfaction": "Satisfaction Utilisateur"
-  },
-  "testimonials": {
-    "title": "Ce Que Disent Nos Utilisateurs",
-    "subtitle": "Approuvé par des milliers d'étudiants, professeurs et administrateurs dans les principales institutions éducatives.",
-    "categories": {
-      "all": "Tous les Avis",
-      "student": "Étudiants",
-      "teacher": "Professeurs",
-      "admin": "Administrateurs"
+    "ticketing": {
+      "soon": "Bientôt",
+      "title": "Billetterie",
+      "desc": "Un module complet pour vos soirées et événements — bientôt disponible.",
+      "toastMeta": "PROXIMAPP · maintenant",
+      "toastMsg": "Billet confirmé · Gala 2025 — Rang C"
     },
-    "stats": {
-      "institutions": "Institutions",
-      "users": "Utilisateurs Actifs",
-      "rating": "Note Moyenne"
-    }
-  },
-  "cta": {
-    "title": "Prêt à Transformer Votre École ?",
-    "subtitle": "Rejoignez des milliers d'institutions éducatives utilisant déjà ProximApp pour rationaliser leurs opérations.",
-    "button": "Commencez Votre Voyage",
-    "secondaryButton": "Explorer GitHub"
-  },
-  "footer": {
-    "description": "Plateforme de gestion scolaire open-source construite avec des technologies modernes.",
-    "product": "Produit",
-    "support": "Support",
-    "company": "Entreprise",
-    "legal": "Légal",
-    "rights": "Tous droits réservés."
-  },
-  "pages": {
     "features": {
-      "title": "Fonctionnalités",
-      "subtitle": "Découvrez les fonctionnalités puissantes qui font de ProximApp le choix parfait pour votre école",
-      "student": {
-        "title": "Système d'Information Étudiant",
-        "description": "Gestion complète des données étudiantes avec suivi académique, surveillance de l'assiduité et analyses de performance."
+      "events": {
+        "title": "Événements",
+        "desc": "Agenda, inscriptions, rappels."
       },
-      "payment": {
-        "title": "Intégration Paiement QR",
-        "description": "Traitement de paiement sécurisé et rapide pour les frais scolaires, la cafétéria et autres services utilisant des codes QR."
+      "posts": {
+        "title": "Actus & posts",
+        "desc": "Un fil d'info local."
       },
-      "authentication": {
-        "title": "Authentification Unique (SSO)",
-        "description": "Système d'authentification unifié qui fonctionne sur toutes les plateformes et applications scolaires."
+      "campaigns": {
+        "title": "Campagnes",
+        "desc": "Votes & élections."
       },
-      "analytics": {
-        "title": "Analyses Avancées",
-        "description": "Tableaux de bord et rapports en temps réel pour suivre les performances de l'école, les progrès des étudiants et l'efficacité opérationnelle."
-      },
-      "communication": {
-        "title": "Plateforme de Communication",
-        "description": "Système de messagerie intégré pour une communication transparente entre enseignants, étudiants et parents."
-      },
-      "mobile": {
-        "title": "Applications Mobile Multi-Plateformes",
-        "description": "Applications Flutter natives offrant toutes les fonctionnalités sur appareils iOS et Android."
+      "custom": {
+        "title": "Et celles que vous voulez",
+        "desc": "Modulaire par conception. Dites-nous votre besoin."
       }
     },
-    "solutions": {
-      "title": "Solutions",
-      "subtitle": "Solutions adaptées aux différents besoins éducatifs",
-      "elementary": {
-        "title": "Écoles Primaires",
-        "description": "Interface adaptée aux enfants avec outils de communication parentale et suivi académique de base.",
-        "features": [
-          "Portail Parents",
-          "Carnet de Notes Basique",
-          "Suivi d'Assiduité",
-          "Calendrier d'Événements"
-        ]
-      },
-      "secondary": {
-        "title": "Écoles Secondaires",
-        "description": "Gestion académique avancée avec planification de cours et analyses de performance.",
-        "features": [
-          "Gestion de Cours",
-          "Analyses de Notes",
-          "Système d'Horaires",
-          "Gestion d'Examens"
-        ]
-      },
-      "university": {
-        "title": "Universités",
-        "description": "Plateforme complète pour l'enseignement supérieur avec gestion de recherche et de départements.",
-        "features": [
-          "Gestion de Départements",
-          "Suivi de Recherche",
-          "Réseau d'Anciens",
-          "Analyses Avancées"
-        ]
-      }
+    "personalization": {
+      "eyebrow": "Personnalisation",
+      "title": "Une app 100% à votre image",
+      "desc": "Votre nom, votre logo, vos couleurs, vos fonctionnalités. L'app appartient à votre association — pas l'inverse.",
+      "shot1": "Capture d'écran 1",
+      "shot2": "Capture d'écran 2",
+      "shot3": "Capture d'écran 3"
     },
-    "about": {
-      "title": "À Propos de ProximApp",
-      "subtitle": "Construire l'avenir de la technologie éducative",
-      "mission": {
-        "title": "Notre Mission",
-        "description": "Démocratiser l'accès aux logiciels de gestion scolaire de haute qualité en fournissant une plateforme open-source que les écoles peuvent personnaliser et déployer selon leurs besoins spécifiques."
-      },
-      "technology": {
-        "title": "Stack Technologique",
-        "description": "Construit avec des technologies modernes et évolutives pour assurer fiabilité et performance.",
-        "items": [
-          "Flutter pour applications mobiles multi-plateformes",
-          "Python FastAPI pour backend robuste",
-          "PostgreSQL pour stockage de données fiable",
-          "Docker pour déploiement facile"
-        ]
-      },
-      "community": {
-        "title": "Communauté Open Source",
-        "description": "ProximApp est construit par des éducateurs, pour des éducateurs. Rejoignez notre communauté croissante de contributeurs et aidez à façonner l'avenir des logiciels de gestion scolaire."
-      }
+    "video": {
+      "eyebrow": "En vidéo",
+      "title": "Voyez l'app en action",
+      "desc": "Deux minutes pour comprendre comment ProximApp fait vivre un campus au quotidien.",
+      "placeholder": "Déposez la vidéo démo (ou une vignette)"
     },
-    "contact": {
-      "title": "Nous Contacter",
-      "subtitle": "Entrez en contact avec notre équipe",
-      "form": {
-        "name": "Nom",
-        "email": "Email",
-        "subject": "Sujet",
-        "message": "Message",
-        "send": "Envoyer le Message",
-        "description": "Contactez notre équipe pour toute question ou assistance.",
-        "namePlaceholder": "Votre nom complet",
-        "emailPlaceholder": "votre.email@entreprise.com",
-        "subjectPlaceholder": "Brève description de votre demande",
-        "messagePlaceholder": "Parlez-nous davantage de votre projet ou demande. Incluez les exigences spécifiques ou questions que vous avez.",
-        "responseTime": "Nous vous répondrons dans les 24 heures",
-        "supportNote": "Demandes générales et support - Nous vous répondrons dans les 24 heures"
+    "oss": {
+      "eyebrow": "Deux dépôts, entièrement ouverts",
+      "title": "Construit en public, à vous de le faire tourner",
+      "desc": "ProximApp, c'est une vraie stack open source de production : un client Flutter et une API Python modulaire. Forkez-la, ajoutez un module, ou déployez le tout pour votre école.",
+      "titan": {
+        "name": "Titan",
+        "tech": "Flutter",
+        "desc": "Le client multiplateforme — une seule base de code pour iOS, Android et le Web. Publié sur les stores sous MyECL, myemapp, et le nom de votre école.",
+        "meta": "iOS · Android · Web"
       },
-      "info": {
-        "email": "Email",
-        "phone": "Téléphone",
-        "address": "Adresse"
-      }
+      "hyperion": {
+        "name": "Hyperion",
+        "tech": "FastAPI",
+        "desc": "L'API — un petit cœur vital (auth, permissions, migrations) et des modules à composer. Ajoutez le vôtre.",
+        "meta": "Python · PostgreSQL · Redis"
+      },
+      "cta": "Voir sur GitHub →"
+    },
+    "finalCta": {
+      "titleLine1": "Lançons l'app",
+      "titleLine2": "de votre association.",
+      "desc": "Conception, déploiement, hébergement et support — accompagnés de bout en bout.",
+      "ctaPrimary": "Demander une démo",
+      "email": "contact@proximapp.fr"
+    },
+    "footer": {
+      "openSource": "Open source · github.com/ProximApp"
     }
   }
 }

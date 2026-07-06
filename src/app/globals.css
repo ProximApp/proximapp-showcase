@@ -1,5 +1,24 @@
 @import "tailwindcss";
 
+/* ProximApp showcase — Bricolage Grotesque (display) + Space Grotesk (body) */
+.font-display {
+  font-family: var(--font-display), "Bricolage Grotesque", system-ui, sans-serif;
+}
+.font-body {
+  font-family: var(--font-body), "Space Grotesk", system-ui, sans-serif;
+}
+
+/* Hero mockup + ambient float (from design 3a) */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+.animate-floaty { animation: floaty 6s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-floaty { animation: none; }
+}
+
 :root {
   --radius: 0.65rem;
   --background: oklch(1 0 0);
