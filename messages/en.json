@@ -2,107 +2,131 @@
   "showcase": {
     "nav": {
       "features": "Features",
-      "custom": "Custom-built",
-      "personalization": "Branding",
+      "branding": "Branding",
+      "build": "Build",
+      "opensource": "Open source",
       "demo": "Demo",
-      "cta": "Demo →"
+      "cta": "Book a demo"
     },
     "hero": {
-      "badge": "Built by students · Open source",
-      "titleLead": "The app that brings your",
-      "titleHighlight": "campus to life.",
-      "subtitle": "An app in your association's image — payments, events, news and the modules you dream up. We build it, deploy it, and support it with you.",
-      "ctaPrimary": "Request a demo",
-      "ctaSecondary": "Tell us your need",
-      "usersLabel": "Used by",
-      "mockupAlt": "Preview of the ProximApp mobile app"
+      "eyebrow": "CAMPUS SUPER-APP",
+      "title": "Pay, gather & vote — in <em>one</em> app.",
+      "sub": "One app for the whole of campus life.",
+      "body": "A white-label app your student association brands as its own — your name, your logo, your colors, your modules. Built by students, open source — we deploy, ship and maintain it for you.",
+      "ctaPrimary": "View a demo",
+      "ctaSecondary": "See QR payments",
+      "meta1": "Built by students",
+      "meta3": "100% open source",
+      "phoneAlt": "Phone showing a QR payment of twelve euros, paid",
+      "scanToPay": "Scan to pay",
+      "paid": "paid"
     },
-    "trust": {
-      "items": [
-        "Built by students",
-        "Flutter + FastAPI",
-        "Self-hostable",
-        "100% open source"
-      ]
-    },
-    "sectionFeatures": {
-      "eyebrow": "Features",
-      "title": "Everything campus life needs",
-      "intro": "From payments to events, news and votes — plus the custom modules you dream up."
-    },
-    "payment": {
-      "eyebrow": "QR code payments",
-      "title": "Get paid in one scan — no fees",
-      "desc": "Dues, events and shop: your members scan, and it's paid.",
-      "toastMeta": "PROXIMAPP · now",
-      "toastMsg": "Payment received — <b>€12.00</b> · BDE membership"
-    },
-    "ticketing": {
-      "soon": "Soon",
-      "title": "Ticketing",
-      "desc": "A full ticketing module for your parties and events — coming soon.",
-      "toastMeta": "PROXIMAPP · now",
-      "toastMsg": "Ticket confirmed · Gala 2025 — Row C"
-    },
-    "features": {
-      "events": {
-        "title": "Events",
-        "desc": "Calendar, sign-ups, reminders."
+    "how": {
+      "eyebrow": "HOW IT WORKS",
+      "title": "From blank app to <em>your</em> app.",
+      "brand": {
+        "title": "Brand it",
+        "desc": "Your logo & colors, applied across every screen. It reads as yours from launch."
       },
-      "posts": {
-        "title": "News & posts",
-        "desc": "A local news feed."
+      "modules": {
+        "title": "Pick your modules",
+        "desc": "Payments, events, news, campaigns — compose the app your association needs."
       },
-      "campaigns": {
-        "title": "Campaigns",
-        "desc": "Votes & elections."
+      "deploy": {
+        "title": "We deploy",
+        "desc": "Shipped to the app stores and hosted — iOS, Android and Web, all handled."
       },
-      "custom": {
-        "title": "And the ones you want",
-        "desc": "Modular by design. Tell us your need."
+      "support": {
+        "title": "We support",
+        "desc": "End to end. Updates, questions and fixes — a student team that has your back."
       }
     },
-    "personalization": {
-      "eyebrow": "Branding",
-      "title": "An app 100% in your image",
-      "desc": "Your name, your logo, your colors, your features. The app belongs to your association — not the other way around.",
-      "shot1": "Screenshot 1",
-      "shot2": "Screenshot 2",
-      "shot3": "Screenshot 3"
+    "flagship": {
+      "eyebrow": "THE FLAGSHIP",
+      "title": "Get paid in one <em>scan</em>.",
+      "lead": "Members scan a code and it's done. Dues, event tickets, shop purchases — paid instantly, straight to your association. No card readers, no queues, no fees.",
+      "p1": "One scan to pay — dues, events and the shop.",
+      "p2": "Instant confirmation for member and treasurer alike.",
+      "p3": "No fees. What's collected is what you keep.",
+      "qrLabel": "SCAN TO PAY · DECORATIVE",
+      "received": "Payment received",
+      "dues": "BDE membership"
     },
-    "video": {
-      "eyebrow": "In video",
-      "title": "See the app in action",
-      "desc": "Two minutes to see how ProximApp powers campus life every day.",
-      "placeholder": "Drop the demo video (or a thumbnail)"
+    "stats": {
+      "aria": "By the numbers",
+      "fees": "Fees on payments",
+      "campuses": "Campuses live",
+      "codebase": "Codebase · iOS/Android/Web",
+      "oss": "Open source"
+    },
+    "composer": {
+      "eyebrow": "THE MODULES",
+      "title": "Pick the modules your <em>association</em> needs.",
+      "intro": "Tell us what you need — we ship your app with those modules enabled. Start with payments, add more as your year grows.",
+      "groupAria": "Choose modules",
+      "soon": "Soon",
+      "previewAria": "Live preview of the app with the selected modules",
+      "yourModules": "your modules",
+      "empty": "No modules yet — pick one.",
+      "shipped": "shipped"
+    },
+    "modules": {
+      "payments": "Payments",
+      "events": "Events",
+      "news": "News",
+      "campaigns": "Campaigns",
+      "custom": "Custom",
+      "ticketing": "Ticketing",
+      "cat": {
+        "payments": "pay · qr · dues",
+        "events": "gather · rsvp",
+        "news": "posts · feed",
+        "campaigns": "votes · elections",
+        "custom": "build · your own",
+        "ticketing": "entry · scan"
+      }
+    },
+    "branding": {
+      "yourBde": "Your BDE",
+      "yourAssociation": "your association",
+      "eyebrow": "WHITE-LABEL",
+      "title": "One app, <em>every</em> identity.",
+      "intro": "The same codebase, re-skinned end to end for each association — logo, colours, name in the stores. No version is the “real” one; they’re all first-class. Switch below.",
+      "scanToPay": "Scan to pay",
+      "groupAria": "Choose a brand",
+      "caption": "Live today as <b>MyECL</b> and <b>myemapp</b> — yours is next."
+    },
+    "build": {
+      "eyebrow": "THE BUILD",
+      "title": "From your brief to <em>the stores</em>.",
+      "lead": "You send the brand and pick the modules. We build, ship and host it — you stay a student association, not a software team.",
+      "termAria": "Terminal: proxima builds a white-label app named BDE Lyon and ships it to iOS, Android and Web, hosted and supported.",
+      "barRight": "white-label · one codebase",
+      "brand": "your logo & palette",
+      "modules": "payments · events · news · votes",
+      "buildLine": "iOS · Android · Web, one codebase",
+      "done": "live in the stores — we host & support it."
     },
     "oss": {
-      "eyebrow": "Two repos, fully open",
-      "title": "Built in the open, yours to run",
-      "desc": "ProximApp is a real, production open-source stack: a Flutter client and a modular Python API. Fork it, add a module, or deploy the whole thing for your school.",
-      "titan": {
-        "name": "Titan",
-        "tech": "Flutter",
-        "desc": "The cross-platform client — one codebase for iOS, Android and Web. Shipped to the stores as MyECL, myemapp, and your school's own name.",
-        "meta": "iOS · Android · Web"
-      },
-      "hyperion": {
-        "name": "Hyperion",
-        "tech": "FastAPI",
-        "desc": "The API — a small vital core (auth, permissions, migrations) plus modules you compose. Add your own.",
-        "meta": "Python · PostgreSQL · Redis"
-      },
-      "cta": "View on GitHub →"
+      "eyebrow": "OPEN SOURCE",
+      "title": "Two repositories. <em>Nothing</em> hidden.",
+      "clientRole": "The client",
+      "titanDesc": "One Flutter codebase for iOS, Android and Web — shipped to the stores as MyECL, myemapp, or a school's own name. The white-label surface members hold in their hands.",
+      "backendRole": "The backend",
+      "hyperionDesc": "A small, vital core — auth, permissions, migrations — plus composable modules. Everything an association runs on, open to read and audit. We deploy, extend and maintain it for you.",
+      "gh": "View on GitHub",
+      "trust1": "Built by students",
+      "trust3": "Built & hosted for you",
+      "trust4": "100% open source",
+      "liveOn": "Live on <b>2 campuses</b> — <b>École Centrale de Lyon</b> · <b>emlyon business school</b>"
     },
-    "finalCta": {
-      "titleLine1": "Let's launch your",
-      "titleLine2": "association's app.",
-      "desc": "Design, deployment, hosting and support — guided end to end.",
-      "ctaPrimary": "Request a demo",
-      "email": "contact@proximapp.fr"
+    "cta": {
+      "eyebrow": "LET'S BUILD IT",
+      "title": "Let's launch your association's <em>app</em>."
     },
     "footer": {
-      "openSource": "Open source · github.com/ProximApp"
+      "contact": "Contact",
+      "tagline": "Built by students · Flutter + FastAPI"
     }
   }
 }

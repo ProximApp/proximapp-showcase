@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Space_Grotesk } from "next/font/google";
+import { Fraunces, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import "../globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -9,21 +9,33 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
-const display = Bricolage_Grotesque({
+// Broadsheet editorial pairing: Fraunces (serif display), Hanken Grotesk
+// (sans body/UI), IBM Plex Mono (labels & terminal). Exposed as CSS vars that
+// globals.css maps onto --serif / --sans / --mono.
+const serif = Fraunces({
   subsets: ["latin"],
-  weight: ["400", "600", "700", "800"],
-  variable: "--font-display",
+  style: ["normal", "italic"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-serif",
+  display: "swap",
 });
-const body = Space_Grotesk({
+const sans = Hanken_Grotesk({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-body",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sans",
+  display: "swap",
+});
+const mono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "ProximApp — L'app qui fait vivre votre campus",
   description:
-    "Une application à l'image de votre association : paiements par QR code, événements, actus et modules sur-mesure. Open source, conçue, déployée et accompagnée de bout en bout.",
+    "Une app à l'image de votre association : paiements par QR code, événements, actus et modules sur-mesure. Open source — conçue, déployée et maintenue de bout en bout.",
 };
 
 type Props = {
@@ -44,13 +56,19 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale}>
       <body
-        className={`${display.variable} ${body.variable} font-body bg-[#0b0b15] text-[#f1f0f8] antialiased`}
+        className={`${serif.variable} ${sans.variable} ${mono.variable} antialiased`}
+        style={{ background: "var(--paper)", color: "var(--ink)" }}
       >
         <NextIntlClientProvider messages={messages}>
           <LanguageProvider>
-            <Header />
-            <main>{children}</main>
-            <Footer />
+            {/* pa-root wraps the page (not the fixed language switcher, which
+                LanguageProvider renders as a sibling) so its grain + z-index
+                rules don't fight the switcher's fixed positioning. */}
+            <div className="pa-root">
+              <Header />
+              <main>{children}</main>
+              <Footer />
+            </div>
           </LanguageProvider>
         </NextIntlClientProvider>
       </body>

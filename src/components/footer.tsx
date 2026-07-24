@@ -1,30 +1,43 @@
-import Image from "next/image";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { BrandMark } from "@/components/brand-mark";
 
 export function Footer() {
-  const t = useTranslations("showcase.footer");
+  const t = useTranslations("showcase");
+
+  const links = [
+    { href: "#modules", label: t("nav.features") },
+    { href: "#branding", label: t("nav.branding") },
+    { href: "#opensource", label: t("nav.opensource") },
+    { href: "#demo", label: t("nav.demo") },
+    { href: "mailto:contact@proximapp.fr", label: t("footer.contact") },
+  ];
 
   return (
-    <footer className="bg-[#0b0b15]">
-      <div className="mx-auto flex max-w-[1160px] flex-col gap-3 border-t border-white/10 px-6 py-7 text-[13px] text-white/40 sm:flex-row sm:items-center sm:justify-between sm:px-14">
-        <span className="flex items-center gap-2 font-display font-extrabold text-[#f1f0f8]">
-          <Image
-            src="/proximapp-logo.png"
-            alt=""
-            width={22}
-            height={22}
-            className="h-[22px] w-[22px] object-contain"
-          />
-          ProximApp
-        </span>
-        <Link
-          href="https://github.com/ProximApp"
-          target="_blank"
-          className="transition-colors hover:text-white/70"
-        >
-          {t("openSource")}
-        </Link>
+    <footer className="site-foot">
+      <div className="wrap">
+        <div className="foot-top">
+          <a className="wordmark" href="#top" aria-label="ProximApp">
+            <BrandMark id="foot" />
+            <span className="word">
+              Proxim<b>App</b>
+            </span>
+          </a>
+          <nav className="foot-links" aria-label="Footer">
+            {links.map((l, i) => (
+              <span key={l.href} style={{ display: "inline-flex", alignItems: "center" }}>
+                <a href={l.href}>{l.label}</a>
+                {i < links.length - 1 && <span className="sep">◆</span>}
+              </span>
+            ))}
+          </nav>
+        </div>
+        <div className="foot-bottom">
+          <span>
+            Open source <span className="diamond">◆</span>{" "}
+            <a href="https://github.com/ProximApp">github.com/ProximApp</a>
+          </span>
+          <span>{t("footer.tagline")}</span>
+        </div>
       </div>
     </footer>
   );
