@@ -362,22 +362,30 @@
 
 
 /* ============================================================
-   ProximApp — Broadsheet editorial theme (Ember palette)
+   ProximApp — Broadsheet editorial theme (Aurora / violet palette)
    Ported from the finalized landing artifact. Palette swaps by
    editing only the second :root token block below.
+
+   Brand logo colors are violet #8b7bff + cyan #46d9ff, tuned for a
+   dark ground. This is a light-paper design, so those pastels live
+   where they read: the logo violet is --violet-hi (bright, used on
+   dark grounds — terminal glyphs, composer flag). The primary ink
+   accent (--violet) and secondary (--cyan) are deepened from the
+   same families so they stay legible as ink on paper and as band
+   backgrounds. Neutral is a cool violet-biased off-white.
    ============================================================ */
 
   :root{
-    --paper:#f4f0e9;
-    --panel:#faf7f1;
-    --ink:#1c1712;
-    --violet:#d1541f;
-    --violet-hi:#ec7a3f;
-    --violet-deep:#b5410f;
-    --cyan:#e6a52e;
-    --ink-rgb:28,23,18;
-    --violet-rgb:209,84,31;
-    --paper-rgb:244,240,233;
+    --paper:#f3f1f8;
+    --panel:#fbfaff;
+    --ink:#191524;
+    --violet:#5a44d6;
+    --violet-hi:#8b7bff;
+    --violet-deep:#4a34c2;
+    --cyan:#0e8ba6;
+    --ink-rgb:25,21,36;
+    --violet-rgb:90,68,214;
+    --paper-rgb:243,241,248;
     --hair:rgba(var(--ink-rgb),.14);
     --hair-soft:rgba(var(--ink-rgb),.08);
     --ink-60:rgba(var(--ink-rgb),.6);
@@ -516,7 +524,7 @@
   }
   .wordmark{display:inline-flex;align-items:center;gap:.6em;}
   .wordmark .mark{
-    width:24px;height:24px;flex:none;color:var(--violet);
+    width:26px;height:26px;flex:none;display:block;object-fit:contain;
   }
   .wordmark .word{
     font-family:var(--serif);font-weight:700;font-size:1.32rem;

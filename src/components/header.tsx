@@ -16,7 +16,7 @@ export function Header() {
     <header className="site-head">
       <div className="wrap">
         <a className="wordmark" href="#top" aria-label="ProximApp">
-          <BrandMark id="head" />
+          <BrandMark />
           <span className="word">
             Proxim<b>App</b>
           </span>

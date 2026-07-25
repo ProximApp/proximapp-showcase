@@ -17,7 +17,7 @@ export function Footer() {
       <div className="wrap">
         <div className="foot-top">
           <a className="wordmark" href="#top" aria-label="ProximApp">
-            <BrandMark id="foot" />
+            <BrandMark />
             <span className="word">
               Proxim<b>App</b>
             </span>
