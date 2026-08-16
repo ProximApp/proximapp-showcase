@@ -112,26 +112,26 @@ export default function HomePage() {
   }[] = [
     { key: "payments" },
     { key: "events" },
-      { key: "feed" },
+    { key: "feed" },
     { key: "campaigns" },
+    { key: "ticketing" },
     { key: "custom" },
-      { key: "ticketing" },
   ];
   const order: ModKey[] = [
     "payments",
     "events",
     "feed",
     "campaigns",
-    "custom",
     "ticketing",
+    "custom",
   ];
   const previewTiles: ModKey[] = [
     "payments",
     "events",
     "feed",
     "campaigns",
+    "ticketing",
     "custom",
-       "ticketing",
   ];
   const [selected, setSelected] = React.useState<Set<ModKey>>(
     () => new Set<ModKey>(["payments", "events", "feed"])
