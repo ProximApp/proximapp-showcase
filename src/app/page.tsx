@@ -1,6 +1,18 @@
-import { redirect } from "next/navigation";
-import { routing } from "@/i18n/routing";
+import { getMessages, setRequestLocale } from "next-intl/server";
 
-export default function Home() {
-  redirect(`/${routing.defaultLocale}`);
+import { LocaleShell } from "@/components/locale-shell";
+import ShowcasePage from "@/components/showcase-page";
+
+export default async function HomePage() {
+  const locale = "fr";
+
+  setRequestLocale(locale);
+
+  const messages = await getMessages();
+
+  return (
+    <LocaleShell locale={locale} messages={messages}>
+      <ShowcasePage />
+    </LocaleShell>
+  );
 }
