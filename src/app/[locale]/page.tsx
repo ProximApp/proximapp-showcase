@@ -908,7 +908,7 @@ export default function HomePage() {
               <div className="c-meta">
                 <span className="diamond">◆</span> iOS · Android · Web
               </div>
-              <a className="gh" href="https://github.com/ProximApp">
+              <a className="gh" href="https://github.com/ProximApp/Titan">
                 {t("oss.gh")} <span>→</span>
               </a>
             </article>
@@ -922,7 +922,7 @@ export default function HomePage() {
               <div className="c-meta">
                 <span className="diamond">◆</span> Python · PostgreSQL · Redis
               </div>
-              <a className="gh" href="https://github.com/ProximApp">
+              <a className="gh" href="https://github.com/ProximApp/Hyperion">
                 {t("oss.gh")} <span>→</span>
               </a>
             </article>
