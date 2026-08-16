@@ -1,12 +1,51 @@
-// The `<html>` and `<body>` tags live in `app/[locale]/layout.tsx` so the
-// document can carry the correct `lang` and the dark theme classes. This root
-// layout only passes children through (required by Next.js for the not-found
-// boundary). Rendering html/body here too would produce duplicate tags and the
-// browser would keep the first body's classes, dropping the theme.
+import type { Metadata } from "next";
+import { Fraunces, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
+import "./globals.css";
+
+const serif = Fraunces({
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-serif",
+  display: "swap",
+});
+
+const sans = Hanken_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const mono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "ProximApp — L'app qui fait vivre votre campus",
+  description:
+    "Une app à l'image de votre association : paiements par QR code, événements, actus et modules sur-mesure. Open source — conçue, déployée et maintenue de bout en bout.",
+};
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <html>
+      <body
+        className={`${serif.variable} ${sans.variable} ${mono.variable} antialiased`}
+        style={{
+          background: "var(--paper)",
+          color: "var(--ink)",
+        }}
+      >
+        {children}
+      </body>
+    </html>
+  );
 }
