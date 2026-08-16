@@ -40,6 +40,14 @@
         "title": "We support",
         "desc": "End to end. Updates, questions and fixes — a student team that has your back."
       }
+     },
+    "carousel": {
+      "eyebrow": "ALL IN ONE APP",
+      "title": "Pay, attend & stay informed — in <em>one</em> app.",
+      "lead": "Payments, ticketing and the live feed: one app, one interface. Swipe through everything your members can do.",
+      "aria": "Carousel showing payments, ticketing and the live feed.",
+      "prev": "Previous slide",
+      "next": "Next slide"
     },
     "flagship": {
       "eyebrow": "THE FLAGSHIP",
@@ -52,6 +60,37 @@
       "received": "Payment received",
       "dues": "BDE membership"
     },
+        "tickets": {
+          "eyebrow": "EVENT MANAGEMENT",
+          "title": "Run your <em>ticketing</em>, in a tap.",
+          "lead": "Sell tickets — free or paid — for every event, right in the app, and validate entry with a scan.",
+          "p1": "Buy and validate in the app; entry has never been faster.",
+          "p2": "Pricing (members, guests, staff…) and quotas, configurable.",
+          "p3": "Online payment, no fees.",
+          "aria": "Event ticket: BDE Lyon concert, Thu Jul 24 8:00 PM, twelve euros, VIP pass, Row B 12, validated at entry.",
+          "kicker": "PASS · 8:00 PM",
+          "event": "BDE Lyon Concert",
+          "when": "Thu. Jul 24 · 8:00 PM",
+          "place": "BDE Hall",
+          "amount": "€12.00",
+          "stubTag": "VIP PASS",
+          "seat": "ROW B · 12",
+          "validated": "Scan at entry"
+        },
+        "feed": {
+          "eyebrow": "REACH YOUR STUDENTS",
+          "title": "What's on <em>this week</em>?",
+          "lead": "One live feed. Your students won't miss another event or announcement.",
+          "p1": "One feed with the news that matters.",
+          "p2": "Push notifications for the news that matters.",
+          "p3": "Calendar sync via our iCal link.",
+          "panelLabel": "LIVE FEED · NOW",
+          "carouselAria": "App feed preview: an event, a poll and an announcement.",
+          "tabs": { "feed": "Feed", "params": "Settings", "annonces": "Announcements", "autres": "Others" },
+          "c1": { "ava": "C", "title": "Commuz'", "time": "3 days ago", "pin": "Latest ECLAT", "text": "Commuz' 2026 presents its end-of-year concert", "more": "read more" },
+          "c2": { "ava": "B", "title": "BDE · Poll", "time": "1 day ago", "question": "Which 2026 budget would you join?", "bar1": "Concert · 62%", "bar2": "Trip · 28%", "more": "see results" },
+          "c3": { "ava": "E", "title": "ECAT", "time": "2 h ago", "text": "Sign-ups for the end-of-year trips are open", "more": "read more" }
+        },
     "stats": {
       "aria": "By the numbers",
       "fees": "Fees on payments",
@@ -73,14 +112,14 @@
     "modules": {
       "payments": "Payments",
       "events": "Events",
-      "news": "News",
+      "feed": "Feed",
       "campaigns": "Campaigns",
       "custom": "Custom",
       "ticketing": "Ticketing",
       "cat": {
         "payments": "pay · qr · dues",
         "events": "gather · rsvp",
-        "news": "posts · feed",
+        "feed": "posts · feed",
         "campaigns": "votes · elections",
         "custom": "build · your own",
         "ticketing": "entry · scan"
@@ -103,7 +142,7 @@
       "termAria": "Terminal: proxima builds a white-label app named BDE Lyon and ships it to iOS, Android and Web, hosted and supported.",
       "barRight": "white-label · one codebase",
       "brand": "your logo & palette",
-      "modules": "payments · events · news · votes",
+      "modules": "payments · events · feed · votes",
       "buildLine": "iOS · Android · Web, one codebase",
       "done": "live in the stores — we host & support it."
     },

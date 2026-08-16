@@ -40,6 +40,14 @@
         "title": "On accompagne",
         "desc": "De bout en bout. Mises à jour, questions et correctifs — une équipe étudiante qui assure."
       }
+     },
+    "carousel": {
+      "eyebrow": "TOUT, DANS UNE APP",
+      "title": "Payer, assister, s'informer — en <em>une</em> app.",
+      "lead": "Paiements, billetterie et fil d'actu : la même app, la même interface. Faites glisser pour tout voir.",
+      "aria": "Carrousel présentant les paiements, la billetterie et le fil d'actualités.",
+      "prev": "Diapositive précédente",
+      "next": "Diapositive suivante"
     },
     "flagship": {
       "eyebrow": "LA FONCTION PHARE",
@@ -52,6 +60,37 @@
       "received": "Paiement reçu",
       "dues": "Cotisation BDE"
     },
+      "tickets": {
+        "eyebrow": "GESTION DE VOS ÉVÉNEMENTS",
+        "title": "Gérez facilement votre <em>billetterie</em>.",
+        "lead": "Une billetterie pour chacun de vos événements — gratuits ou payants, directement depuis l'app.",
+        "p1": "Achetez et validez depuis l'app, jamais l'entrée ne fut aussi rapide.",
+        "p2": "Tarifs (adhérents, non-adhérents, staff…) et quotas configurables.",
+        "p3": "Paiement en ligne, sans frais.",
+        "aria": "Billet d'événement : Concert BDE Lyon, jeudi 24 juillet 20 h, 12 euros, pass VIP, rangée B 12, validé à l'entrée.",
+        "kicker": "PASS · 20:00",
+        "event": "Concert BDE Lyon",
+        "when": "Jeu. 24 Juil · 20:00",
+        "place": "Palais du BDE",
+        "amount": "€12.00",
+        "stubTag": "PASS VIP",
+        "seat": "RANGÉE B · 12",
+        "validated": "Valider à l'entrée"
+      },
+      "feed": {
+        "eyebrow": "COMMUNIQUEZ AVEC VOS ÉTUDIANTS",
+        "title": "Que faire <em>cette semaine</em> ?",
+        "lead": "Un fil unique, en temps réel. Vos étudiants ne rateront plus jamais un événement ou une actualité.",
+        "p1": "Un fil unique avec les actualités importantes.",
+        "p2": "Notifications push pour les actualités importantes.",
+        "p3": "Synchro avec les calendriers, via notre lien iCal.",
+        "panelLabel": "FIL · EN DIRECT",
+        "carouselAria": "Aperçu du fil d'annonces de l'app : un événement, un sondage et une annonce.",
+        "tabs": { "feed": "Feed", "params": "Paramètres", "annonces": "Annonces", "autres": "Autres" },
+        "c1": { "ava": "C", "title": "Commuz'", "time": "Il y a 3 jours", "pin": "Dernier ECLAT", "text": "La Commuz' 2026 vous présente son concert de fin d'année", "more": "voir plus" },
+        "c2": { "ava": "B", "title": "BDE · Sondage", "time": "Il y a 1 jour", "question": "À quel budget 2026 seriez-vous ?", "bar1": "Concert · 62%", "bar2": "Sortie · 28%", "more": "voir les résultats" },
+        "c3": { "ava": "E", "title": "ECAT", "time": "Il y a 2 h", "text": "Les inscriptions aux sorties sont ouvertes", "more": "voir plus" }
+      },
     "stats": {
       "aria": "En chiffres",
       "fees": "Frais sur les paiements",
@@ -73,14 +112,14 @@
     "modules": {
       "payments": "Paiements",
       "events": "Événements",
-      "news": "Actus",
+      "feed": "Fil",
       "campaigns": "Campagnes",
       "custom": "Sur-mesure",
       "ticketing": "Billetterie",
       "cat": {
         "payments": "payer · qr · cotis",
         "events": "réunir · rsvp",
-        "news": "posts · fil",
+        "feed": "posts · fil",
         "campaigns": "votes · élections",
         "custom": "créer · le vôtre",
         "ticketing": "entrée · scan"

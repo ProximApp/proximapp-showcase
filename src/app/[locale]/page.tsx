@@ -50,6 +50,13 @@ const Icon = {
       <path d="M7 8h7M7 12h7M7 16h4" />
     </>
   ),
+  feed: (
+    <>
+      <path d="M4 6h16" />
+      <path d="M4 12h12" />
+      <path d="M4 18h8" />
+    </>
+  ),
   campaigns: (
     <>
       <path d="M9 11l3 3L22 4" />
@@ -94,7 +101,7 @@ export default function HomePage() {
   type ModKey =
     | "payments"
     | "events"
-    | "news"
+      | "feed"
     | "campaigns"
     | "custom"
     | "ticketing";
@@ -105,15 +112,15 @@ export default function HomePage() {
   }[] = [
     { key: "payments" },
     { key: "events" },
-    { key: "news" },
+      { key: "feed" },
     { key: "campaigns" },
     { key: "custom" },
-    { key: "ticketing", soon: true, disabled: true },
+      { key: "ticketing" },
   ];
   const order: ModKey[] = [
     "payments",
     "events",
-    "news",
+    "feed",
     "campaigns",
     "custom",
     "ticketing",
@@ -121,12 +128,13 @@ export default function HomePage() {
   const previewTiles: ModKey[] = [
     "payments",
     "events",
-    "news",
+    "feed",
     "campaigns",
     "custom",
+       "ticketing",
   ];
   const [selected, setSelected] = React.useState<Set<ModKey>>(
-    () => new Set<ModKey>(["payments", "events", "news"])
+    () => new Set<ModKey>(["payments", "events", "feed"])
   );
   const toggle = (m: { key: ModKey; disabled?: boolean }) => {
     if (m.disabled) return;
@@ -219,6 +227,107 @@ export default function HomePage() {
       caret.remove();
     };
   }, []);
+   /* ---------- feature carousel: payments · ticketing · feed ---------- */
+  const [feat, setFeat] = React.useState(0);
+  React.useEffect(() => {
+    const reduce = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) return;
+    const id = window.setInterval(
+      () => setFeat((f) => (f + 1) % 3),
+      5200
+    );
+    return () => window.clearInterval(id);
+   }, []);
+
+  const slides = [
+     {
+      key: "payments" as const,
+      eyebrow: t("flagship.eyebrow"),
+      title: t.rich("flagship.title", rich),
+      lead: t("flagship.lead"),
+      points: [t("flagship.p1"), t("flagship.p2"), t("flagship.p3")],
+      visual: (
+        <div className="qr-wrap">
+          <div className="qr-mono">{`{ ${t("flagship.qrLabel")} }`}</div>
+          <div className="qr" aria-hidden="true">
+            {QR_PATTERN.map((row, r) =>
+             row.map((cell, c) => (
+                <i key={`${r}-${c}`} className={cell} />
+              ))
+            )}
+          </div>
+          <div className="receipt">
+            <div className="r-l">
+              <span className="st">{t("flagship.received")}</span>
+              <span className="ds">{t("flagship.dues")}</span>
+            </div>
+            <span className="amt tnum">€12.00</span>
+          </div>
+        </div>
+      ),
+     },
+     {
+      key: "ticketing" as const,
+      eyebrow: t("tickets.eyebrow"),
+      title: t.rich("tickets.title", rich),
+      lead: t("tickets.lead"),
+      points: [t("tickets.p1"), t("tickets.p2"), t("tickets.p3")],
+      visual: (
+        <div className="ticket" role="img" aria-label={t("tickets.aria")}>
+          <div className="ticket-body">
+            <span className="ticket-kicker">{t("tickets.kicker")}</span>
+            <div className="ticket-event">{t("tickets.event")}</div>
+            <div className="ticket-when">{t("tickets.when")} · {t("tickets.place")}</div>
+            <div className="ticket-qrwrap">
+              <div className="ticket-qr" aria-hidden="true">
+                {QR_PATTERN.map((row, r) =>
+                row.map((cell, c) => (
+                    <i key={`${r}-${c}`} className={cell} />
+                  ))
+                )}
+              </div>
+              <span className="ticket-amount">{t("tickets.amount")}</span>
+            </div>
+          </div>
+          <div className="ticket-stub">
+            <span className="stub-tag">{t("tickets.stubTag")}</span>
+            <span className="stub-seat">{t("tickets.seat")}</span>
+            <span className="stub-valid">✓ {t("tickets.validated")}</span>
+          </div>
+        </div>
+      ),
+     },
+     {
+      key: "feed" as const,
+      eyebrow: t("feed.eyebrow"),
+      title: t.rich("feed.title", rich),
+      lead: t("feed.lead"),
+      points: [t("feed.p1"), t("feed.p2"), t("feed.p3")],
+      visual: (
+        <div className="feed-viewport feed-viewport--static">
+          <div className="qr-mono">{`{ ${t("feed.panelLabel")} }`}</div>
+          <div className="feed-static">
+            <article className="post">
+              <header className="post-head">
+                <span className="post-ava" style={{ background: "var(--red,#e2364f)" }}>
+                  {t("feed.c1.ava")}
+                </span>
+                <div className="post-meta">
+                  <b>{t("feed.c1.title")}</b>
+                  <span>{t("feed.c1.time")}</span>
+                </div>
+              </header>
+              <div className="post-media"><span className="post-script">{t("feed.c1.title")}</span></div>
+              <div className="post-pin">📌 {t("feed.c1.pin")} 📌</div>
+              <p className="post-text">
+                {t("feed.c1.text")} <span className="more">{t("feed.c1.more")}</span>
+              </p>
+            </article>
+          </div>
+        </div>
+      ),
+     },
+   ];
 
   return (
     <>
@@ -243,7 +352,7 @@ export default function HomePage() {
                   <a className="btn" href="#demo">
                     {t("hero.ctaPrimary")} <span className="diamond">◆</span>
                   </a>
-                  <a className="btn ghost" href="#flagship">
+                  <a className="btn ghost" href="#features">
                     {t("hero.ctaSecondary")}{" "}
                     <span className="diamond cyan">◆</span>
                   </a>
@@ -417,59 +526,104 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===================== FLAGSHIP QR ===================== */}
-      <section className="section flagship" id="flagship">
-        <div className="wrap">
-          <div className="flag-grid">
-            <div className="flag-copy">
-              <span className="eyebrow">{`{ ${t("flagship.eyebrow")} }`}</span>
-              <h2 className="display">{t.rich("flagship.title", rich)}</h2>
-              <p className="lead">{t("flagship.lead")}</p>
-              <ul className="flag-points">
-                <li>
-                  <span className="diamond">◆</span>
-                  <span>{t("flagship.p1")}</span>
-                </li>
-                <li>
-                  <span className="diamond">◆</span>
-                  <span>{t("flagship.p2")}</span>
-                </li>
-                <li>
-                  <span className="diamond cyan">◆</span>
-                  <span>{t("flagship.p3")}</span>
-                </li>
-              </ul>
-              <a className="btn" href="#demo">
-                {t("nav.cta")} <span className="diamond">◆</span>
-              </a>
+        {/* ===================== FEATURE CAROUSEL ===================== */}
+        <section className="section feature-carousel" id="features">
+          <div className="wrap">
+            <div className="section-head">
+              <span className="eyebrow">{`{ ${t("carousel.eyebrow")} }`}</span>
+              <h2 className="display section-title">{t.rich("carousel.title", rich)}</h2>
+              <p className="lead" style={{ marginTop: "1rem" }}>{t("carousel.lead")}</p>
             </div>
 
-            <div className="flag-panel">
-              <span className="tick tl" aria-hidden="true" />
-              <span className="tick tr" aria-hidden="true" />
-              <span className="tick bl" aria-hidden="true" />
-              <span className="tick br" aria-hidden="true" />
-              <div className="qr-wrap">
-                <div className="qr-mono">{`{ ${t("flagship.qrLabel")} }`}</div>
-                <div className="qr" aria-hidden="true">
-                  {QR_PATTERN.map((row, r) =>
-                    row.map((cell, c) => (
-                      <i key={`${r}-${c}`} className={cell} />
-                    ))
-                  )}
+            <div
+              className="carousel"
+              role="group"
+              aria-roledescription="carousel"
+              aria-label={t("carousel.aria")}
+            >
+              <div className="carousel-viewport">
+                <div
+                   className="carousel-track"
+                   style={{ transform: `translateX(-${feat * 100}%)` }}
+                >
+                  {slides.map((s, i) => (
+                    <article
+                     key={s.key}
+                     className="carousel-slide"
+                     aria-hidden={i !== feat}
+                     aria-label={s.eyebrow}
+                    >
+                      <div className="flag-grid">
+                        <div className="flag-copy">
+                          <span className="eyebrow">{`{ ${s.eyebrow} }`}</span>
+                          <h2 className="display">{s.title}</h2>
+                          <p className="lead">{s.lead}</p>
+                          <ul className="flag-points">
+                            {s.points.map((p, j) => (
+                               <li key={j}>
+                                 <span className={`diamond${j === 2 ? " cyan" : ""}`}>◆</span>
+                                 <span>{p}</span>
+                               </li>
+                            ))}
+                          </ul>
+                          <a className="btn" href="#demo">
+                              {t("nav.cta")} <span className="diamond">◆</span>
+                            </a>
+                        </div>
+                        <div className="flag-panel">
+                          <span className="tick tl" aria-hidden="true" />
+                          <span className="tick tr" aria-hidden="true" />
+                          <span className="tick bl" aria-hidden="true" />
+                          <span className="tick br" aria-hidden="true" />
+                          {s.visual}
+                        </div>
+                      </div>
+                    </article>
+                  ))}
                 </div>
-                <div className="receipt">
-                  <div className="r-l">
-                    <span className="st">{t("flagship.received")}</span>
-                    <span className="ds">{t("flagship.dues")}</span>
-                  </div>
-                  <span className="amt tnum">€12.00</span>
+              </div>
+
+              <div className="carousel-foot">
+                <div className="carousel-dots" role="tablist">
+                  {slides.map((s, i) => (
+                    <button
+                       key={s.key}
+                       type="button"
+                       role="tab"
+                       aria-selected={i === feat}
+                       aria-label={s.eyebrow}
+                       className="cdot"
+                       onClick={() => setFeat(i)}
+                    >
+                       <i className={i === feat ? "on" : ""} />
+                    </button>
+                  ))}
+                </div>
+                <div className="carousel-nav">
+                  <button
+                     type="button"
+                     className="cbtn"
+                     aria-label={t("carousel.prev")}
+                     onClick={() => setFeat((feat + slides.length - 1) % slides.length)}
+                  >
+                     <span aria-hidden="true">←</span>
+                  </button>
+                  <span className="carousel-count tnum" aria-hidden="true">
+                     {`0${feat + 1} / 0${slides.length}`}
+                  </span>
+                  <button
+                     type="button"
+                     className="cbtn"
+                     aria-label={t("carousel.next")}
+                     onClick={() => setFeat((feat + 1) % slides.length)}
+                  >
+                     <span aria-hidden="true">→</span>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* ===================== STATS ===================== */}
       <section
