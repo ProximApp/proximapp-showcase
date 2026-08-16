@@ -723,7 +723,7 @@ export default function HomePage() {
                     <div className="s">{t("composer.yourModules")}</div>
                   </div>
                   <div className="cmp-app">
-                    {previewTiles.map((k) => (
+                    {previewTiles.filter((k) => selected.has(k)).map((k) => (
                       <div
                         key={k}
                         className={`cmp-tile${selected.has(k) ? " on" : ""}`}
