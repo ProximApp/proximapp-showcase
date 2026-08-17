@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+import PlausibleProvider from "next-plausible";
 
 const serif = Fraunces({
   subsets: ["latin"],
@@ -44,7 +45,9 @@ export default function RootLayout({
           color: "var(--ink)",
         }}
       >
-        {children}
+        <PlausibleProvider src="https://argos.proximapp.fr/so.js">
+          {children}
+        </PlausibleProvider>
       </body>
     </html>
   );
