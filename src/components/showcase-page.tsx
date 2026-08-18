@@ -29,7 +29,9 @@ const Icon = {
       <path d="M4 15v4a2 2 0 002 2h12a2 2 0 002-2v-4" />
     </>
   ),
-  support: <path d="M21 11.5a8.4 8.4 0 01-9 8.4L3 21l1.1-3.8A8.5 8.5 0 1121 11.5z" />,
+  support: (
+    <path d="M21 11.5a8.4 8.4 0 01-9 8.4L3 21l1.1-3.8A8.5 8.5 0 1121 11.5z" />
+  ),
   payments: (
     <>
       <rect x="2" y="5" width="20" height="14" rx="2" />
@@ -101,7 +103,7 @@ export default function HomePage() {
   type ModKey =
     | "payments"
     | "events"
-      | "feed"
+    | "feed"
     | "campaigns"
     | "custom"
     | "ticketing";
@@ -134,7 +136,7 @@ export default function HomePage() {
     "custom",
   ];
   const [selected, setSelected] = React.useState<Set<ModKey>>(
-    () => new Set<ModKey>(["payments", "events", "feed"])
+    () => new Set<ModKey>(["payments", "events", "feed"]),
   );
   const toggle = (m: { key: ModKey; disabled?: boolean }) => {
     if (m.disabled) return;
@@ -215,7 +217,7 @@ export default function HomePage() {
             }
           });
         },
-        { threshold: 0.4 }
+        { threshold: 0.4 },
       );
       io.observe(term);
     } else {
@@ -247,7 +249,7 @@ export default function HomePage() {
   }, [feat]);
 
   const slides = [
-     {
+    {
       key: "payments" as const,
       eyebrow: t("flagship.eyebrow"),
       title: t.rich("flagship.title", rich),
@@ -258,9 +260,7 @@ export default function HomePage() {
           <div className="qr-mono">{`{ ${t("flagship.qrLabel")} }`}</div>
           <div className="qr" aria-hidden="true">
             {QR_PATTERN.map((row, r) =>
-             row.map((cell, c) => (
-                <i key={`${r}-${c}`} className={cell} />
-              ))
+              row.map((cell, c) => <i key={`${r}-${c}`} className={cell} />),
             )}
           </div>
           <div className="receipt">
@@ -272,8 +272,8 @@ export default function HomePage() {
           </div>
         </div>
       ),
-     },
-     {
+    },
+    {
       key: "ticketing" as const,
       eyebrow: t("tickets.eyebrow"),
       title: t.rich("tickets.title", rich),
@@ -284,13 +284,15 @@ export default function HomePage() {
           <div className="ticket-body">
             <span className="ticket-kicker">{t("tickets.kicker")}</span>
             <div className="ticket-event">{t("tickets.event")}</div>
-            <div className="ticket-when">{t("tickets.when")} · {t("tickets.place")}</div>
+            <div className="ticket-when">
+              {t("tickets.when")} · {t("tickets.place")}
+            </div>
             <div className="ticket-qrwrap">
               <div className="ticket-qr" aria-hidden="true">
                 {QR_PATTERN.map((row, r) =>
-                row.map((cell, c) => (
+                  row.map((cell, c) => (
                     <i key={`${r}-${c}`} className={cell} />
-                  ))
+                  )),
                 )}
               </div>
               <span className="ticket-amount">{t("tickets.amount")}</span>
@@ -303,8 +305,8 @@ export default function HomePage() {
           </div>
         </div>
       ),
-     },
-     {
+    },
+    {
       key: "feed" as const,
       eyebrow: t("feed.eyebrow"),
       title: t.rich("feed.title", rich),
@@ -316,7 +318,10 @@ export default function HomePage() {
           <div className="feed-static">
             <article className="post">
               <header className="post-head">
-                <span className="post-ava" style={{ background: "var(--red,#e2364f)" }}>
+                <span
+                  className="post-ava"
+                  style={{ background: "var(--red,#e2364f)" }}
+                >
                   {t("feed.c1.ava")}
                 </span>
                 <div className="post-meta">
@@ -324,17 +329,20 @@ export default function HomePage() {
                   <span>{t("feed.c1.time")}</span>
                 </div>
               </header>
-              <div className="post-media"><span className="post-script">{t("feed.c1.title")}</span></div>
+              <div className="post-media">
+                <span className="post-script">{t("feed.c1.title")}</span>
+              </div>
               <div className="post-pin">📌 {t("feed.c1.pin")} 📌</div>
               <p className="post-text">
-                {t("feed.c1.text")} <span className="more">{t("feed.c1.more")}</span>
+                {t("feed.c1.text")}{" "}
+                <span className="more">{t("feed.c1.more")}</span>
               </p>
             </article>
           </div>
         </div>
       ),
-     },
-   ];
+    },
+  ];
 
   return (
     <>
@@ -377,7 +385,11 @@ export default function HomePage() {
 
               {/* hero art: ink disc + phone */}
               <div className="hero-art">
-                <svg className="ink-disc" viewBox="0 0 430 430" aria-hidden="true">
+                <svg
+                  className="ink-disc"
+                  viewBox="0 0 430 430"
+                  aria-hidden="true"
+                >
                   <defs>
                     <radialGradient id="disc" cx="42%" cy="38%" r="70%">
                       <stop offset="0%" className="s0" />
@@ -456,11 +468,35 @@ export default function HomePage() {
                           aria-hidden="true"
                         >
                           <g className="hqr-d">
-                            <rect x="4" y="4" width="26" height="26" fill="none" stroke="#14121c" strokeWidth="6" />
+                            <rect
+                              x="4"
+                              y="4"
+                              width="26"
+                              height="26"
+                              fill="none"
+                              stroke="#14121c"
+                              strokeWidth="6"
+                            />
                             <rect x="14" y="14" width="6" height="6" />
-                            <rect x="70" y="4" width="26" height="26" fill="none" stroke="#14121c" strokeWidth="6" />
+                            <rect
+                              x="70"
+                              y="4"
+                              width="26"
+                              height="26"
+                              fill="none"
+                              stroke="#14121c"
+                              strokeWidth="6"
+                            />
                             <rect x="80" y="14" width="6" height="6" />
-                            <rect x="4" y="70" width="26" height="26" fill="none" stroke="#14121c" strokeWidth="6" />
+                            <rect
+                              x="4"
+                              y="70"
+                              width="26"
+                              height="26"
+                              fill="none"
+                              stroke="#14121c"
+                              strokeWidth="6"
+                            />
                             <rect x="14" y="80" width="6" height="6" />
                             <rect x="40" y="8" width="6" height="6" />
                             <rect x="52" y="8" width="6" height="6" />
@@ -488,7 +524,8 @@ export default function HomePage() {
                         </svg>
                       </div>
                       <div className="ps-pill tnum">
-                        <span className="dot" />€12.00 · {t("hero.paid")}
+                        <span className="dot" />
+                        €12.00 · {t("hero.paid")}
                       </div>
                     </div>
                     <div className="ps-foot">
@@ -510,7 +547,9 @@ export default function HomePage() {
         <div className="wrap">
           <div className="section-head">
             <span className="eyebrow">{`{ ${t("how.eyebrow")} }`}</span>
-            <h2 className="display section-title">{t.rich("how.title", rich)}</h2>
+            <h2 className="display section-title">
+              {t.rich("how.title", rich)}
+            </h2>
           </div>
           <div className="steps">
             {(
@@ -533,104 +572,114 @@ export default function HomePage() {
         </div>
       </section>
 
-        {/* ===================== FEATURE CAROUSEL ===================== */}
-        <section className="section feature-carousel" id="features">
-          <div className="wrap">
-            <div className="section-head">
-              <span className="eyebrow">{`{ ${t("carousel.eyebrow")} }`}</span>
-              <h2 className="display section-title">{t.rich("carousel.title", rich)}</h2>
-              <p className="lead" style={{ marginTop: "1rem" }}>{t("carousel.lead")}</p>
+      {/* ===================== FEATURE CAROUSEL ===================== */}
+      <section className="section feature-carousel" id="features">
+        <div className="wrap">
+          <div className="section-head">
+            <span className="eyebrow">{`{ ${t("carousel.eyebrow")} }`}</span>
+            <h2 className="display section-title">
+              {t.rich("carousel.title", rich)}
+            </h2>
+            <p className="lead" style={{ marginTop: "1rem" }}>
+              {t("carousel.lead")}
+            </p>
+          </div>
+
+          <div
+            className="carousel"
+            role="group"
+            aria-roledescription="carousel"
+            aria-label={t("carousel.aria")}
+          >
+            <div className="carousel-viewport">
+              <div
+                className="carousel-track"
+                style={{ transform: `translateX(-${feat * 100}%)` }}
+              >
+                {slides.map((s, i) => (
+                  <article
+                    key={s.key}
+                    className="carousel-slide"
+                    aria-hidden={i !== feat}
+                    aria-label={s.eyebrow}
+                  >
+                    <div className="flag-grid">
+                      <div className="flag-copy">
+                        <span className="eyebrow">{`{ ${s.eyebrow} }`}</span>
+                        <h2 className="display">{s.title}</h2>
+                        <p className="lead">{s.lead}</p>
+                        <ul className="flag-points">
+                          {s.points.map((p, j) => (
+                            <li key={j}>
+                              <span
+                                className={`diamond${j === 2 ? " cyan" : ""}`}
+                              >
+                                ◆
+                              </span>
+                              <span>{p}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <a className="btn" href="#demo">
+                          {t("nav.cta")} <span className="diamond">◆</span>
+                        </a>
+                      </div>
+                      <div className="flag-panel">
+                        <span className="tick tl" aria-hidden="true" />
+                        <span className="tick tr" aria-hidden="true" />
+                        <span className="tick bl" aria-hidden="true" />
+                        <span className="tick br" aria-hidden="true" />
+                        {s.visual}
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
             </div>
 
-            <div
-              className="carousel"
-              role="group"
-              aria-roledescription="carousel"
-              aria-label={t("carousel.aria")}
-            >
-              <div className="carousel-viewport">
-                <div
-                   className="carousel-track"
-                   style={{ transform: `translateX(-${feat * 100}%)` }}
-                >
-                  {slides.map((s, i) => (
-                    <article
-                     key={s.key}
-                     className="carousel-slide"
-                     aria-hidden={i !== feat}
-                     aria-label={s.eyebrow}
-                    >
-                      <div className="flag-grid">
-                        <div className="flag-copy">
-                          <span className="eyebrow">{`{ ${s.eyebrow} }`}</span>
-                          <h2 className="display">{s.title}</h2>
-                          <p className="lead">{s.lead}</p>
-                          <ul className="flag-points">
-                            {s.points.map((p, j) => (
-                               <li key={j}>
-                                 <span className={`diamond${j === 2 ? " cyan" : ""}`}>◆</span>
-                                 <span>{p}</span>
-                               </li>
-                            ))}
-                          </ul>
-                          <a className="btn" href="#demo">
-                              {t("nav.cta")} <span className="diamond">◆</span>
-                            </a>
-                        </div>
-                        <div className="flag-panel">
-                          <span className="tick tl" aria-hidden="true" />
-                          <span className="tick tr" aria-hidden="true" />
-                          <span className="tick bl" aria-hidden="true" />
-                          <span className="tick br" aria-hidden="true" />
-                          {s.visual}
-                        </div>
-                      </div>
-                    </article>
-                  ))}
-                </div>
+            <div className="carousel-foot">
+              <div className="carousel-dots" role="tablist">
+                {slides.map((s, i) => (
+                  <button
+                    key={s.key}
+                    type="button"
+                    role="tab"
+                    aria-selected={i === feat}
+                    aria-label={s.eyebrow}
+                    className="cdot"
+                    onClick={() => setFeat(i)}
+                  >
+                    <i className={i === feat ? "on" : ""} />
+                  </button>
+                ))}
               </div>
-
-              <div className="carousel-foot">
-                <div className="carousel-dots" role="tablist">
-                  {slides.map((s, i) => (
-                    <button
-                       key={s.key}
-                       type="button"
-                       role="tab"
-                       aria-selected={i === feat}
-                       aria-label={s.eyebrow}
-                       className="cdot"
-                       onClick={() => setFeat(i)}
-                    >
-                       <i className={i === feat ? "on" : ""} />
-                    </button>
-                  ))}
-                </div>
-                <div className="carousel-nav">
-                  <button
-                     type="button"
-                     className="cbtn"
-                     aria-label={t("carousel.prev")}
-                     onClick={() => setFeat((feat + slides.length - 1) % slides.length)}
-                  >
-                     <span aria-hidden="true">←</span>
-                  </button>
-                  <span className="carousel-count tnum" aria-hidden="true">
-                     {`0${feat + 1} / 0${slides.length}`}
-                  </span>
-                  <button
-                     type="button"
-                     className="cbtn"
-                     aria-label={t("carousel.next")}
-                     onClick={() => setFeat((feat + 1) % slides.length)}
-                  >
-                     <span aria-hidden="true">→</span>
-                  </button>
-                </div>
+              <div className="carousel-nav">
+                <button
+                  type="button"
+                  className="cbtn"
+                  aria-label={t("carousel.prev")}
+                  onClick={() =>
+                    setFeat((feat + slides.length - 1) % slides.length)
+                  }
+                >
+                  <span aria-hidden="true">←</span>
+                </button>
+                <span className="carousel-count tnum" aria-hidden="true">
+                  {`0${feat + 1} / 0${slides.length}`}
+                </span>
+                <button
+                  type="button"
+                  className="cbtn"
+                  aria-label={t("carousel.next")}
+                  onClick={() => setFeat((feat + 1) % slides.length)}
+                >
+                  <span aria-hidden="true">→</span>
+                </button>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* ===================== STATS ===================== */}
       <section
@@ -677,7 +726,11 @@ export default function HomePage() {
           </div>
 
           <div className="composer">
-            <div className="cmp-grid" role="group" aria-label={t("composer.groupAria")}>
+            <div
+              className="cmp-grid"
+              role="group"
+              aria-label={t("composer.groupAria")}
+            >
               {modules.map((m) => (
                 <button
                   key={m.key}
@@ -730,23 +783,25 @@ export default function HomePage() {
                     <div className="s">{t("composer.yourModules")}</div>
                   </div>
                   <div className="cmp-app">
-                    {previewTiles.filter((k) => selected.has(k)).map((k) => (
-                      <div
-                        key={k}
-                        className={`cmp-tile${selected.has(k) ? " on" : ""}`}
-                      >
-                        <svg
-                          className="ti"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="1.6"
+                    {previewTiles
+                      .filter((k) => selected.has(k))
+                      .map((k) => (
+                        <div
+                          key={k}
+                          className={`cmp-tile${selected.has(k) ? " on" : ""}`}
                         >
-                          {Icon[k]}
-                        </svg>
-                        <span className="tn">{t(`modules.${k}`)}</span>
-                      </div>
-                    ))}
+                          <svg
+                            className="ti"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="1.6"
+                          >
+                            {Icon[k]}
+                          </svg>
+                          <span className="tn">{t(`modules.${k}`)}</span>
+                        </div>
+                      ))}
                     {activeMods.length === 0 && (
                       <div className="cmp-empty">{t("composer.empty")}</div>
                     )}
@@ -818,7 +873,11 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="sk-controls" role="group" aria-label={t("branding.groupAria")}>
+            <div
+              className="sk-controls"
+              role="group"
+              aria-label={t("branding.groupAria")}
+            >
               {brands.map((br, i) => (
                 <button
                   key={br.key}
@@ -842,12 +901,18 @@ export default function HomePage() {
         <div className="wrap">
           <div
             className="section-head"
-            style={{ textAlign: "center", maxWidth: "660px", marginInline: "auto" }}
+            style={{
+              textAlign: "center",
+              maxWidth: "660px",
+              marginInline: "auto",
+            }}
           >
             <span className="eyebrow" style={{ justifyContent: "center" }}>
               {`{ ${t("build.eyebrow")} }`}
             </span>
-            <h2 className="display section-title">{t.rich("build.title", rich)}</h2>
+            <h2 className="display section-title">
+              {t.rich("build.title", rich)}
+            </h2>
             <p className="lead" style={{ margin: "1rem auto 0" }}>
               {t("build.lead")}
             </p>
@@ -902,7 +967,9 @@ export default function HomePage() {
         <div className="wrap">
           <div className="section-head">
             <span className="eyebrow">{`{ ${t("oss.eyebrow")} }`}</span>
-            <h2 className="display section-title">{t.rich("oss.title", rich)}</h2>
+            <h2 className="display section-title">
+              {t.rich("oss.title", rich)}
+            </h2>
           </div>
           <div className="os-grid">
             <article className="os-card">
