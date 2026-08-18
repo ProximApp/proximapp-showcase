@@ -227,17 +227,24 @@ export default function HomePage() {
       caret.remove();
     };
   }, []);
-   /* ---------- feature carousel: payments · ticketing · feed ---------- */
+  /* ---------- feature carousel: payments · ticketing · feed ---------- */
   const [feat, setFeat] = React.useState(0);
+
+  const AUTO_PLAY_MS = 5200;
+
   React.useEffect(() => {
-    const reduce = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    const reduce = window.matchMedia?.(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
     if (reduce) return;
-    const id = window.setInterval(
-      () => setFeat((f) => (f + 1) % 3),
-      5200
-    );
-    return () => window.clearInterval(id);
-   }, []);
+
+    const timer = window.setTimeout(() => {
+      setFeat((f) => (f + 1) % slides.length);
+    }, AUTO_PLAY_MS);
+
+    return () => window.clearTimeout(timer);
+  }, [feat]);
 
   const slides = [
      {
