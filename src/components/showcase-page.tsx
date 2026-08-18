@@ -564,7 +564,6 @@ export default function HomePage() {
                 <div className="num tnum">{s.n}</div>
                 <StepIcon>{s.icon}</StepIcon>
                 <h3>{t(`how.${s.cmd}.title`)}</h3>
-                <div className="cmd">{s.cmd}</div>
                 <p>{t(`how.${s.cmd}.desc`)}</p>
               </article>
             ))}
